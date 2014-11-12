@@ -9,8 +9,8 @@ i=1:N;
 j=[2:N,1];
 v=ones(1,N);
 M=sparse(i,j,v,N,N);%circle
-[sN,alive]=lifeform(M,alpha)
+[sN,alive]=lifeform2(M,alpha)
 v(1,N)=0;
 M=sparse(i,j,v,N,N);%line
-[sN,alive]=lifeform(M,alpha)
+[sN,alive]=lifeform2(M,alpha)
 end

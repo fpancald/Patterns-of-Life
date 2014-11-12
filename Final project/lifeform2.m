@@ -17,19 +17,19 @@ for t=1:10 %this will eventually be the number of time steps for each
             continue;
         else
             if cellsE(1,i)~=0%check energy still required
-                ediff=cellsE(1,i)-cellE(1,i)%difference between energy required and available
+                ediff=cellsE(1,i)-cellE(1,i);%difference between energy required and available
             else 
-                ediff=-cellE(1,i)
+                ediff=-cellE(1,i);
             end
             cellE(1,i)=0;%reset energy available at 0 (we are sending out all the energy, after taking what needed)
             if ediff<0%negative means there is more available than required
                 cellsE(1,i)=0;%set energy still required to 0
                 ediff=-ediff;%change residual energy sign
-                eT=ediff/sum(conM(i,:))-sE% energy divided between connection after energy cost is deducted
+                eT=ediff/sum(conM(i,:))-sE;% energy divided between connection after energy cost is deducted
                 if eT>=1%check enough energy for transport
-                    cellE(1,find(conM(i,:)~=0))=cellE(1,find(conM(i,:)~=0))+eT%distributeresidual energy equally between each node connected and detract energy cost
+                    cellE(1,find(conM(i,:)~=0))=cellE(1,find(conM(i,:)~=0))+eT;%distributeresidual energy equally between each node connected and detract energy cost
                 else
-                    cellE(1,i)=ediff
+                    cellE(1,i)=ediff;
                 end
             else% positive difference means not enough available energy
                 cellsE(1,i)=ediff;%still needed energy reset to difference value
@@ -39,7 +39,7 @@ for t=1:10 %this will eventually be the number of time steps for each
     end
 end
     for i=1:N% at the end of the time steps if a cell still need energy is signed as dead
-        if cellsE(1,i)~=0
+        if cellsE(1,i)~=0;
             cells(1,i)=0;
         end
     end
