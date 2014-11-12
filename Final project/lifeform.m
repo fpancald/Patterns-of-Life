@@ -22,7 +22,7 @@ for t=1:1000 %this will eventually be the number of time steps for each
                 if ediff<0%negative means there is more available than required
                     cellsE(1,i)=0;%set energy still required to 0
                     ediff=-ediff;%change residual energy sign
-                    eT=ediff/sum(conM(1,:))-sE;% energy divided between connection after energy cost is deducted
+                    eT=ediff/sum(conM(i,:))-sE;% energy divided between connection after energy cost is deducted
                     if eT>=0%check enough energy for transport
                         cellE(1,find(conM(i,:)~=0))=cellE(1,find(conM(i,:)~=0))+eT;%distributeresidual energy equally between each node connected and detract energy cost
                     end
