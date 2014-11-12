@@ -1,4 +1,4 @@
-function test(alpha)
+function test2(alpha)
 M=[0 1 1 1 0 0
     0 0 0 0 1 1
     0 1 0 0 0 0
