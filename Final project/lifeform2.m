@@ -9,7 +9,7 @@ cellsE=1*cells;%energy required to keep each cell alive every index correspond t
 cellE=0*cells;%Energy given at time step 0 during feeding cycle to each cell
 cellE(1,1)=E;% at the moment we are giving all energy to a single cell
 
-for t=1:10 %this will eventually be the number of time steps for each
+for t=1:100 %this will eventually be the number of time steps for each
 %feeding cycle, not sure if we should keep it fixed or go on till we have
 %no more residual energy
     for i=1:N %go through each cell and distribute energy if any present
