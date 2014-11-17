@@ -1,6 +1,7 @@
-function [ptin,ptout]=testheart(xpts)
+function [X,nX,ptin,ptout]=testheart(xpts)
 format long
 X=[];
+nX=[];
 % xpts=500;
 for i=0:xpts
     x(1)=i/xpts;
@@ -8,6 +9,8 @@ for i=0:xpts
         x(2)=j/xpts;
         if ((4*(x(1)-0.5))^2+(4*(x(2)-0.4))^2-1)^3-(4*(x(1)-0.5))^2*(4*(x(2)-0.4))^3<0
             X=[X;x(1),x(2)];
+        else
+           nX=[nX;x(1),x(2)];
         end
     end
 end

@@ -1,3 +1,4 @@
+function testperceptron(xpts,v)
 % v=[2 0
 %     2 0
 %     0 0];
@@ -6,14 +7,14 @@
 %     2 0
 %     -3 0
 %     0 0];
-v=[1.7 0.7
-    1.7 0.7
-    2 0
-    -3 0
-    0 0];
-
+% v=[1.7 0.7
+%     1.7 0.7
+%     2 0
+%     -3 0
+%     0 0];
+% xpts=100;
 X=[];
-xpts=100;
+
 for i=0:xpts
     x(1)=i/xpts;
     for j=0:xpts
@@ -26,3 +27,6 @@ end
 scatter(X(:,1),X(:,2),1);
 xlim([0 1]);
 ylim([0 1]);
+% hold on 
+% testheart(xpts);
+end
