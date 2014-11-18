@@ -24,7 +24,7 @@ for i=0:xpts
         end
     end
 end
-scatter(X(:,1),X(:,2),1);
+scatter(X(:,1),X(:,2),5);
 xlim([0 1]);
 ylim([0 1]);
 % hold on 

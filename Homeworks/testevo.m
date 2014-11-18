@@ -1,4 +1,5 @@
-told=testfitness(100,v);
+xpts=100;
+told=testfitness(xpts,v);
 n=length(v);
 for j=1:n
     iter=10;
